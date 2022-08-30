@@ -31,6 +31,10 @@ public class MainApp {
             System.out.println();
         }
 
+        User findUser = userService.findByCar("dddd",11111);
+        System.out.println(findUser.toString());
+
+
         context.close();
     }
 }
