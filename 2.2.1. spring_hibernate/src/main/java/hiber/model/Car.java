@@ -13,8 +13,10 @@ public class Car {
     @Column(name = "series")
     int series;
 
-    public Car(Long id, String model, int series) {
-        this.id = id;
+
+    @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
+    User user;
+    public Car(String model, int series) {
         this.model = model;
         this.series = series;
     }
